@@ -1,0 +1,5 @@
+---
+- hosts: hdocker
+  tasks:
+    - name: pull darron/centurion-test
+      command: docker pull darron/centurion-test
