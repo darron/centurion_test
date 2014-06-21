@@ -1,10 +1,14 @@
-GEM
-  remote: https://rubygems.org/
+PATH
+  remote: /Users/darron/Dropbox/src/centurion
   specs:
     centurion (1.0.9)
       excon (~> 0.33)
       logger-colors
       trollop
+
+GEM
+  remote: https://rubygems.org/
+  specs:
     excon (0.37.0)
     logger-colors (1.0.0)
     trollop (2.0)
@@ -13,4 +17,4 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  centurion
+  centurion!

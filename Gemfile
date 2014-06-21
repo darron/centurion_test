@@ -2,4 +2,4 @@
 source "https://rubygems.org"
 
 # gem "rails"
-gem 'centurion'
+gem 'centurion', :path => '/Users/darron/Dropbox/src/centurion'

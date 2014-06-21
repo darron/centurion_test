@@ -1,6 +1,7 @@
 namespace :environment do
   task :common do
     set :image, 'darron/centurion-test'
+    set :registry_base, 'https://registry.hub.docker.com/'
     # Point this to an appropriate health check endpoint for rolling deploys (defaults to '/')
     # set :status_endpoint, '/status/check'
   end
@@ -15,11 +16,11 @@ namespace :environment do
    desc 'Production environment'
   task :production => :common do
     set_current_environment(:production)
-    # env_vars YOUR_ENV: 'production'
+    env_vars YOUR_ENV: 'production'
     host_port 23235, container_port: 80
     host '192.168.0.16'
     host '192.168.0.41'
     host '192.168.0.42'
-    # host_volume '/mnt/volume1', container_volume: '/mnt/volume1'
+    #host_volume '/tmp', container_volume: '/mnt/volume1'
   end
 end
