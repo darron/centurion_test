@@ -1,0 +1,5 @@
+---
+- hosts: hdocker
+  tasks:
+    - name: pull octohost/nginx
+      command: docker pull octohost/nginx
